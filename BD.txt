@@ -1,3 +1,0 @@
---VARIANT2--select to_char(book_date, 'DD.MM.YYYY HH'), count(*)
---from bookings.bookings b
---group by to_char(book_date,'DD.MM.YYYY HH') having count(*)>300
