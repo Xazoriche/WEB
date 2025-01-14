@@ -1,0 +1,305 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+/* Flex Container for Cards */
+.cards-container {
+    display: flex; /* Makes this a flex container */
+    flex-wrap: wrap; /* Allows cards to wrap to new lines */
+    justify-content: center; /* Centers cards horizontally on the main axis */
+    gap: 20px; /* Adds space between cards */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Flex Item (Card) */
+.card {
+    width: 300px; /* Fixed width for cards */
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; /* Make card a flex container */
+    flex-direction: column;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Card Content (flex item within card) */
+.card-content {
+   padding: 15px;
+   flex-grow: 1; /* Allows content to grow and fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+.card-description {
+  margin-bottom: 10px;
+}
+.card-footer{
+  display: flex;
+   justify-content: flex-end;
+}
+.card-button {
+   padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Align button to the end of the cross axis */
+}
+.card-button:hover {
+  background-color: #2980b9;
+}
+
+#card-four {
+     order: -1; /* change the order of the card */
+}
+/* Nested flex container */
+.nested-container {
+   display: flex;
+   gap: 10px;
+   background-color: #eee;
+   padding: 15px;
+   margin-top: 20px;
+}
+.nested-item {
+  padding: 15px;
+  background-color: #ccc;
+   flex: 1 0 auto;
+}
+.item1{
+   align-self: center;
+   order: 1;
+}
+.item2{
+   order: -1;
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flexbox Utility Classes */
+
+  /* --- head Section --- */
+  .head {
+    background-color: #17494D;
+    text-align: center;
+    padding: 20px;
+  }
+  .head table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+  }
+  .head table tr {
+    
+    padding: 0;
+  }
+  .head .text-content {
+    padding-right: 20px;
+  }
+  .head .button-content {
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .head table th, .head table td {
+    flex: 1;
+    padding: 0;
+  }
+  .head table h1 {
+    color: #CE9FB7;
+    margin: 0;
+    font-size: 3rem;
+  }
+  .head table h2 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 3rem;
+  }
+  .head table h3 {
+    color: #00A656;
+    margin: 0;
+    border-bottom: 2px solid #FFFFFF;
+    font-size: 3rem;
+  }
+  .head table h4 {
+    color: #30AABC;
+    margin: 0;
+    border-bottom: 2px solid #FFFFFF;
+    font-size: 3rem;
+  }
+  .head table h5 {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: left;
+  }
+  .head .button-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .head table button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  .head table button[type="button1"] {
+    background-color: #FF6224;
+    color: white;
+  }
+  .head table button[type="button1"]:hover {
+    background-color: #d65527;
+  }
+  .head table button[type="button2"] {
+    background-color: #17494D;
+    color: #FF6224;
+    border: 2px solid #FF6224;
+  }
+  .head table button[type="button2"]:hover {
+    background-color: #003539;
+    border: 2px solid #FF6224;
+  }
+  
+  /* --- underhead Section --- */
+  .underhead {
+    background-color: #FED6A8;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  .underhead table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  .underhead .image-content {
+      display: flex;
+    justify-content: space-around;
+      align-items: center;
+  }
+  .underhead table h1 {
+    color: #03363D;
+    font-size: 2rem;
+  }
+  .underhead table h3 {
+    color: #03363D;
+    font-size: 1rem;
+  }
+  .underhead .link-container{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .underhead .link-container h2 {
+    color: #03363D;
+    font-size: 1rem;
+    border-bottom: 2px solid #03363D;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* --- cap Section --- */
+  .cap {
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cap-heading {
+      font-size: 2rem;
+      margin-bottom: 10px;
+  }
+  .cap-subheading {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+  }
+  .cap-links {
+    display: flex;
+      padding: 0;
+      list-style: none;
+  }
+  .cap-links h3 {
+      color: black;
+    font-size: 1.5rem;
+      margin-right: 15px;
+  }
+  .cap-links h4 {
+        color: black;
+      font-size: 1.5rem;
+  }
+  
+  /* --- Footer Section --- */
+  footer {
+    font-size: 1rem;
+    padding: 20px;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer > ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
+  
+  footer > ul.buttonNum {
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+  footer > ul.footer-links {
+    justify-content: space-around;
+      margin-bottom: 20px;
+  }
+  footer .footer-text {
+      font-size: 0.8rem;
+      margin: 10px 0;
+      line-height: 1.5;
+      text-align: center;
+  }
+  footer > ul h1 {
+      margin: 0 20px 0 0;
+      font-size: 1rem;
+  }
+  
+  footer > ul h1:last-child {
+    margin-right: 0;
+  }
+  .buttonNum {
+    display: inline-block;
+  }
