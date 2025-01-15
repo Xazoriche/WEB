@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to play and save sudoku</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about-game">Об игре</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#download">Скачть</a></li>
+                <li><a href="#help">Помощь</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about-game">
+            <div class="card-conteiner">
+                <h1>Как играть в Судоку</h1>
+                    <h2>
+                        Судоку — это игра в виде сетки, разделённой на блоки размером 3x3 ячейки, в некоторых из которых заранее написаны числа.
+                    </h2>
+                    <div>
+                        <h3>Правила игры:</h3>
+                    <li>Каждая из строк состоит из 9 ячеек, в которые нужно поместить ряд чисел от 1 до 9 в том порядке, который вы считаете подходящим, но не повторяя его.</li>
+                    <li>Столбцы имеют ту же структуру, что и строки, только по вертикали. При размещении в столбце числа нужно учитывать, чтобы оно не повторялось в том же столбце.</li>
+                    <li>Далее игра усложняется за счёт введения в действие блоков размером 3x3 ячеек. Все они должны содержать полные серии чисел от 1 до 9.</li>
+                    </div>
+                <div class="image">
+                    <img src="start.png" alt="start" class="card-img">
+                </div>
+                <div class="image">
+                    <img src="standart.png" alt="standart" class="card-img">
+                    <img src="timer.png" alt="timer" class="card-img">
+                </div>
+            </div>
+        </section>
+        <section id="reviews">
+            <h2>Что говорят наши пользователи</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="review-text">Я в восторге от этого продукта! Он значительно упростил мою жизнь. Настоятельно рекомендую!</p>
+                <div class="review-footer">
+                    <span class="review-date">Июль 12, 2023</span>
+                   <span class="review-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 
+                </div>
+            </div>
+            <section class="add-review-section">
+                <h2>Оставьте совй отзыв</h2>
+                <form id="review-form">
+                  <div class="form-group">
+                      <label for="userName">Имя:</label>
+                      <input type="text" id="userName" name="userName" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="userRating">Рейтинг:</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star1" name="userRating" value="1">
+                        <label for="star1" title="1 star">&#9733;</label>
+                
+                        <input type="radio" id="star2" name="userRating" value="2">
+                        <label for="star2" title="2 stars">&#9733;</label>
+                
+                        <input type="radio" id="star3" name="userRating" value="3">
+                        <label for="star3" title="3 stars">&#9733;</label>
+                
+                        <input type="radio" id="star4" name="userRating" value="4">
+                        <label for="star4" title="4 stars">&#9733;</label>
+                
+                        <input type="radio" id="star5" name="userRating" value="5">
+                        <label for="star5" title="5 stars">&#9733;</label>
+                    </div>
+                </div>
+
+                   <div class="form-group">
+                     <label for="reviewText">Твой отзыв:</label>
+                     <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+                  </div>
+                  <div class="form-actions">
+                       <button type="submit" class="submit-button">Отправить отзыв</button>
+                  </div>
+                </form>
+            </section>
+        </section>
+        <section id="download">
+            <div class="grid-container">
+                <h2>Преимущества игры</h2>
+                <ul>
+                    <div class="transform rotate3d">Отсутствие рекламы</div>
+                    <div class="transform rotate3d">Разнообразие режимов игры</div>
+                    <div class="transform rotate3d">Открытый код</div>
+                    <div class="transform rotate3d">Обратная связь</div>
+                </ul>
+            </div>
+            <div class="grid-container">
+                <h2>Установка</h2>
+                <ul>
+                    <div class="transform rotate3d">Скачайте файлы</div>
+                    <div class="transform rotate3d">Запустите игру в pycharm</div>
+                    <div class="transform rotate3d">Приступайте к игре</div>
+                </ul>
+            </div>
+            <h3>Скачайте игру</h3>
+        </section>
+            <div class="download-container">
+                <a href="sudoku.py" download="sudoku.py" class="download-button">Скачать игру</a>
+                <a href="Руководство_судоку.docx" download="Руководство_судоку.docx" class="download-button">Руководство по установке игры</a>
+            </div>
+        <footer id="help">
+            <h2>Для связи</h2>
+            <fieldset>
+                <legend>Внесите данные для связи с нами</legend>
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите свое полное имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Почта:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Твой вопрос:</label>
+                    <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Отправить</span>
+                    <span class="icon">&#10148;</span>
+                </button>
+            </fieldset>
+            <a href="Руководство_программиста_для_игры_Судоку.docx" download="Руководство_программиста_для_игры_Судоку.docx" class="download-button">Руководство для программиста</a>
+            <p>&copy; 2024 Игра Судоку скачать для всех платформ</p>
+        </footer>
+    </main>
+</body>
+</html>

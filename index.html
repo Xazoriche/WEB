@@ -4,62 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>how to play and save sudoku</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#about-game">Об игре</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="#download">Скачть</a></li>
-                <li><a href="#help">Помощь</a></li>
+                <li><a href="#about">Об играх</a></li>
+                <li><a href="#reviews">Оставить отзыв</a></li>
+                <li><a href="#help">Контакты</a></li>
+                <li><a href="index.html">Скачать Судоку</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="about-game">
             <div class="card-conteiner">
-                <h1>Как играть в Судоку</h1>
-                    <h2>
-                        Судоку — это игра в виде сетки, разделённой на блоки размером 3x3 ячейки, в некоторых из которых заранее написаны числа.
-                    </h2>
-                    <div>
-                        <h3>Правила игры:</h3>
-                    <li>Каждая из строк состоит из 9 ячеек, в которые нужно поместить ряд чисел от 1 до 9 в том порядке, который вы считаете подходящим, но не повторяя его.</li>
-                    <li>Столбцы имеют ту же структуру, что и строки, только по вертикали. При размещении в столбце числа нужно учитывать, чтобы оно не повторялось в том же столбце.</li>
-                    <li>Далее игра усложняется за счёт введения в действие блоков размером 3x3 ячеек. Все они должны содержать полные серии чисел от 1 до 9.</li>
-                    </div>
-                <div class="image">
-                    <img src="start.png" alt="start" class="card-img">
+                <div class="grid-container card-conteiner1">
+                    <ul>
+                        <div class="transform rotate3d"><h1>Присоединяйтесь к нам в увлекательном путешествии по миру головоломок!</h1></div>
+                        
+                    </ul>
                 </div>
-                <div class="image">
-                    <img src="standart.png" alt="standart" class="card-img">
-                    <img src="timer.png" alt="timer" class="card-img">
+                <div class="grid-container card-conteiner2">
+                    <ul>
+                        <div class="transform rotate3d"><h1>Не упустите возможность расширить свой кругозор, развить логическое мышление и просто хорошо провести время!</h1></div>
+                        
+                    </ul>
                 </div>
             </div>
         </section>
-        <section id="reviews">
-            <h2>Что говорят наши пользователи</h2>
-        <div class="reviews-container">
-            <div class="review-card">
-                <p class="review-text">Я в восторге от этого продукта! Он значительно упростил мою жизнь. Настоятельно рекомендую!</p>
-                <div class="review-footer">
-                    <span class="review-date">Июль 12, 2023</span>
-                   <span class="review-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 
-                </div>
-            </div>
-            <section class="add-review-section">
-                <h2>Оставьте совй отзыв</h2>
-                <form id="review-form">
-                  <div class="form-group">
-                      <label for="userName">Имя:</label>
-                      <input type="text" id="userName" name="userName" required>
-                  </div>
+        <section id="intro">
+            <div>
+                <ul>
+                    <div class="transform rotate3d"><h1>Вот несколько популярных игр на логику, в которые можно поиграть на смартфоне или компьютере:</h1></div>
+                </ul>
+             <div class="grid-container">
+                    <ul>
+                       </div>
+        </section>
+        <section id="about">
+            <div class="grid-container" data-bg="bg1">
+                <ul>
+                    <div class="transform rotate3d">«Судоку» — это головоломка с цифрами. Необходимо заполнить игровое поле цифрами от 1 до 9 так, чтобы в каждом столбце, строке и малом квадрате 3×3 не было повторяющихся значенийы</div>
         
+                </ul>
+                <ul>
+        
+                    <div class="transform rotate3d">«Шахматы» — стратегическая настольная игра для двух игроков. Она развивает логическое мышление, память и концентрацию.</div>
+                </ul>
+            </div>
+            <div class="grid-container" data-bg="bg2">
+                <ul>
+                    <div class="transform rotate3d">«Пасьянсы» — карточные головоломки, которые помогают развивать логику и внимательность.</div>
+                </ul>
+                <ul>
+        
+                    <div class="transform rotate3d">«Эволюция» — карточная стратегическая игра, в которой нужно развивать свою колоду карт, приспосабливаясь к условиям игры.</div>
+                </ul>
+            </div>
+                <div class="grid-container" data-bg="bg3">
+                    <ul>
+                        <div class="transform rotate3d">«Тетрис» — игра на ловкость и быструю реакцию. Необходимо управлять падающими фигурами так, чтобы заполнить горизонтальные линии на игровом поле и не дать фигурам заполнить игровое поле.</div>
+        
+                    </ul>
+                <ul>
+        
+                    <div class="transform rotate3d">«Скраббл» — игра в слова, в которой игроки составляют слова из имеющихся у них букв. Побеждает тот, кто наберёт больше очков.</div>
+                </ul>
+            </div>
+            <div class="grid-container" data-bg="bg4">
+                <ul>
+                    <div class="transform rotate3d">«Змеи и лестницы» — настольная игра для двух и более игроков. Цель — первым добраться до финиша, перемещаясь по игровому полю с помощью броска игральных костей.</div>
+    
+                </ul>
+            <ul>
+    
+                <div class="transform rotate3d">«Тренажёр мозга» — приложение, которое предлагает различные логические задачи, головоломки и упражнения для мозга. Это помогает поддерживать ум в тонусе.</div>
+            </ul>
+        </div>
+        </section>
+            <section class="add-review-section" id="reviews">
+                
+                <form id="review-form">
+                    <h2>Оставьте свой отзыв</h2>
                   <div class="form-group">
-                    <label for="userRating">Рейтинг:</label>
+                      <input type="text" id="userName" name="userName" placeholder="Введите свое полное имя" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="userName" name="userName" placeholder="Введите почту" required>
+                </div>
+                  <div class="form-group">
                     <div class="star-rating">
                         <input type="radio" id="star1" name="userRating" value="1">
                         <label for="star1" title="1 star">&#9733;</label>
@@ -79,62 +115,28 @@
                 </div>
 
                    <div class="form-group">
-                     <label for="reviewText">Твой отзыв:</label>
-                     <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+                     <textarea id="reviewText" name="reviewText" rows="4" placeholder="Твой отзыв" required></textarea>
                   </div>
                   <div class="form-actions">
                        <button type="submit" class="submit-button">Отправить отзыв</button>
                   </div>
                 </form>
             </section>
-        </section>
-        <section id="download">
-            <div class="grid-container">
-                <h2>Преимущества игры</h2>
-                <ul>
-                    <div class="transform rotate3d">Отсутствие рекламы</div>
-                    <div class="transform rotate3d">Разнообразие режимов игры</div>
-                    <div class="transform rotate3d">Открытый код</div>
-                    <div class="transform rotate3d">Обратная связь</div>
-                </ul>
-            </div>
-            <div class="grid-container">
-                <h2>Установка</h2>
-                <ul>
-                    <div class="transform rotate3d">Скачайте файлы</div>
-                    <div class="transform rotate3d">Запустите игру в pycharm</div>
-                    <div class="transform rotate3d">Приступайте к игре</div>
-                </ul>
-            </div>
-            <h3>Скачайте игру</h3>
-        </section>
-            <div class="download-container">
-                <a href="sudoku.py" download="sudoku.py" class="download-button">Скачать игру</a>
-                <a href="Руководство_судоку.docx" download="Руководство_судоку.docx" class="download-button">Руководство по установке игры</a>
-            </div>
         <footer id="help">
-            <h2>Для связи</h2>
             <fieldset>
-                <legend>Внесите данные для связи с нами</legend>
+                <h2>Внесите данные для связи с нами</h2>
                 <div class="form-group">
-                    <label for="name">Имя:</label>
                     <input type="text" id="name" name="name" placeholder="Введите свое полное имя" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Почта:</label>
                     <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="reviewText">Твой вопрос:</label>
-                    <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="submit-button">
                     <span class="button-text">Отправить</span>
                     <span class="icon">&#10148;</span>
                 </button>
             </fieldset>
-            <a href="Руководство_программиста_для_игры_Судоку.docx" download="Руководство_программиста_для_игры_Судоку.docx" class="download-button">Руководство для программиста</a>
-            <p>&copy; 2024 Игра Судоку скачать для всех платформ</p>
+            <p>&copy; Развивайтесь улыбайтесь</p>
         </footer>
     </main>
 </body>
