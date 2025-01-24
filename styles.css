@@ -22,8 +22,7 @@ h1{
     font-weight: weight;
     font-style: normal;
   }
-
-header {
+  header {
     background-color: #259BE9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
     position: fixed;
@@ -33,7 +32,8 @@ header {
     text-align: center;
     z-index: 100;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Центрируем содержимое header */
+    align-items: center; /* Выравнивание по вертикали */
 }
 
 nav ul {
@@ -42,21 +42,29 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 10rem;
 }
-
 .header-ul {
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 20px 0;
+    padding: 0; /*  Убираем отступы */
     margin: 0;
-    justify-content: space-around;
-    width: 90%;
+    justify-content: space-between; /* Распределяем лого и меню */
+    width: 90%; /* Задаем ширину header-ul */
+    max-width: 1200px; /* Ограничение ширины */
+    margin: 0 auto; /* Центрируем header-ul */
 }
 
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
 .header-ul li {
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 nav a {
@@ -64,7 +72,7 @@ nav a {
     color: white;
     font-weight: 500;
     transition: color 0.3s ease;
-    margin-right: 50px;
+    margin-right: 0px;
 }
 
 .header-ul a:hover {
@@ -178,6 +186,7 @@ nav a {
 }
 
 #about {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -206,8 +215,11 @@ nav a {
     align-items: center;
     text-align: center;
   box-sizing: border-box;
+  list-style: none; 
 }
-
+#about > .grid-container ul {
+    list-style: none; 
+}
 @media (max-width: 600px) {
     #about > .grid-container {
         flex: 1 1 calc(100% - 20px);
@@ -284,6 +296,44 @@ nav a {
    background-repeat: no-repeat;
      opacity: 0.2;
    z-index: -1; /* Фон сзади контента */
+}
+#about > .grid-container[data-bg="bg5"]::before {
+    content: "";
+    position: absolute; /* Абсолютное позиционирование внутри контейнера */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Фон сзади контента */
+}
+#about > .grid-container[data-bg="bg5"] > ul{
+    display: flex;
+    flex-direction: column; /* Для выравнивания элементов ul вертикально */
+    justify-content: center; /* Центрируем ul по горизонтали */
+    align-items: center;  /* Выравниваем ul в центре */
+    position: relative; /* Для позиционирования iframe внутри ul */
+    z-index: 1; /* Поверх фона */
+    margin: 0; /* Убираем margin у ul */
+    padding: 0; /*Убираем padding у ul*/
+}
+#about > .grid-container[data-bg="bg5"] > ul li {
+     list-style: none;  /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+#about > .grid-container[data-bg="bg5"] > ul li .transform {
+   position: relative; /* Позиция для iframe */
+   overflow: hidden; /* Застраховывает от того, что видео будет вылезать за рамки*/
+    max-width: 100%;  /* Не позволяет div с iframe выходить за пределы контейнера */
+    display: flex; /* Располагаем содержимое внутри transform по центру*/
+    justify-content: center; /*Центрирует iframe по горизонтали*/
+    align-items: center;  /*Центрирует iframe по вертикали*/
+}
+
+#about > .grid-container[data-bg="bg5"] > ul li .transform > iframe {
+     max-width: 100%;
+   height: auto;  /* Сохраняем пропорции iframe */
 }
 .add-review-section {
     display: flex;
