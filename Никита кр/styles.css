@@ -1,0 +1,996 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Шрифты */
+@font-face {
+  font-family: 'BebasNeue Bold';
+  src: url('fonts/BebasNeue-Bold.woff2') format('woff2'),
+       url('fonts/BebasNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue Book';
+  src: url('fonts/BebasNeue-Book.woff2') format('woff2'),
+       url('fonts/BebasNeue-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue Light';
+  src: url('fonts/BebasNeue-Light.woff2') format('woff2'),
+       url('fonts/BebasNeue-Light.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue Regular';
+  src: url('fonts/BebasNeue-Regular.woff2') format('woff2'),
+       url('fonts/BebasNeue-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue Thin';
+  src: url('fonts/BebasNeue-Thin.woff2') format('woff2'),
+       url('fonts/BebasNeue-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('fonts/Raleway-Regular.woff2') format('woff2'),
+       url('fonts/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway Italic';
+  src: url('fonts/Raleway-Italic.woff2') format('woff2'),
+       url('fonts/Raleway-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Верхняя панель */
+.top-bar {
+  background: #ffffff;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+.breeds {
+  display: flex;
+  gap: 2rem;
+  color: #000000;
+}
+
+.breeds span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.top-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.top-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.top-links a:hover {
+  color: #158041;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .top-bar-content {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+  }
+
+  .breeds,
+  .top-links {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+}
+
+/* Основная шапка */
+.header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #fff;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-family: 'BebasNeue Bold', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.header-text p {
+  font-family: 'BebasNeue Book', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  line-height: 1.8;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #396448;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #396448;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-subtext {
+  font-size: 1rem;
+  color: #000000;
+  font-style: italic;
+}
+
+.header-image {
+  flex: 1;
+  text-align: center;
+}
+
+.header-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .header-text h1 {
+      font-size: 2rem;
+  }
+
+  .header-text p {
+      font-size: 1rem;
+  }
+
+  .header-buttons {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .header-image img {
+      max-width: 80%;
+  }
+}
+
+/* О питомнике */
+.about {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 700;
+}
+
+.about-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .about-text,
+  .about-image {
+      flex: none;
+      width: 100%;
+  }
+
+  .about-image img {
+      max-width: 80%;
+  }
+}
+
+/* Наши щенки */
+.puppies {
+  padding: 6rem 0;
+  background: #396448;
+}
+
+.puppies h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.puppies-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.puppy-card {
+  background: #396448;
+  border: 1px solid #396448;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 23%;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.puppy-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.puppy-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.puppy-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.puppies-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #396448;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: #02ff2c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .puppy-card {
+      width: 100%;
+      max-width: 300px;
+  }
+
+  .puppies-grid {
+      gap: 1rem;
+  }
+}
+
+/* Почему мы лучший выбор */
+.why-us {
+  padding: 6rem 0;
+  background: #f9f9f9;
+}
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.why-us-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.why-us-list {
+  flex: 2;
+  max-width: 800px;
+}
+
+.why-us-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.why-us-item:last-child {
+  border-bottom: none;
+}
+
+.why-us-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #27ae60;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.why-us-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.why-us-image {
+  flex: 1;
+  text-align: center;
+}
+
+.why-us-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .why-us-content {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .why-us-image img {
+      max-width: 80%;
+  }
+
+  .why-us h2 {
+      font-size: 2rem;
+  }
+
+  .why-us-item h3 {
+      font-size: 1.3rem;
+  }
+
+  .why-us-item p {
+      font-size: 0.9rem;
+  }
+}
+
+/* О породе */
+.breed {
+  padding: 6rem 0;
+  background: #AB8264;
+}
+
+.breed h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.breed-content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breed-image {
+  flex: 1;
+  text-align: center;
+}
+
+.breed-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.breed-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.breed-info-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.breed-info-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.breed-info-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.breed-info-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.breed-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background: #396448;
+  color: #fff;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: #2ecc71;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .breed-content {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .breed-info {
+      gap: 1rem;
+  }
+
+  .breed-text,
+  .breed-image {
+      flex: none;
+      width: 100%;
+  }
+
+  .breed-image img {
+      max-width: 80%;
+  }
+}
+
+/* Жизнь питомника */
+.life {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.life h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.life-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.life-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 30%;
+  transition: 0.3s;
+}
+
+.life-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.life-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.life-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.life-card p {
+  font-size: 1rem;
+}
+
+/* База знаний */
+.knowledge-base {
+  padding: 4rem 0;
+  background: #396448;
+}
+
+.knowledge-base h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.knowledge-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.knowledge-card {
+  background: #396448;
+  border: 1px solid #396448;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 30%;
+  transition: 0.3s;
+}
+
+.knowledge-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.knowledge-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.knowledge-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.knowledge-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.knowledge-card .btn-primary {
+  margin-top: 1rem;
+}
+
+/* Часто задаваемые вопросы */
+.faq {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #2c3e50;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.faq-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background: #fff;
+}
+
+.faq-question h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.faq-question i {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1rem;
+  background: #f9f9f9;
+}
+
+.faq-answer.active {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Контакты */
+.contact {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  align-self: center;
+}
+
+/* Подвал */
+.footer {
+  background: #AB8264;
+  color: #fff;
+  padding: 4rem 0 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-newsletter {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: #27ae60;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-newsletter h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links ul li a,
+.footer-contact ul li {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #27ae60;
+}
+
+.footer-contact ul li i {
+  margin-right: 0.5rem;
+  color: #27ae60;
+}
+
+.footer-newsletter p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background: #27ae60;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #2ecc71;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #444;
+  margin-top: 2rem;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-newsletter {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .social-links {
+      justify-content: center;
+  }
+
+  .newsletter-form {
+      flex-direction: column;
+  }
+
+  .newsletter-form button {
+      width: 100%;
+  }
+}
